@@ -243,6 +243,7 @@ NSString * const kAdTypeMraid = @"mraid";
 	if (_isLoading) 
 	{
 		MPLogWarn(@"Ad view (%p) already loading an ad. Wait for previous load to finish.", self.adView);
+		[self.adView backFillWithNothing];
 		return;
 	}
 	
